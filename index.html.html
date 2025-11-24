@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - InfoAlunos</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f2f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .loginbox {
+      background-color: #0282b6;
+      width: 580px; /* aumento da largura */
+      padding: 35px 30px; /* padding proporcional maior */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border-radius: 8px; /* levemente maior para combinar com o novo tamanho */
+    }
+
+    .loginbox img {
+      max-width: 120px; /* maior para se ajustar à caixa */
+      margin-bottom: 20px;
+    }
+
+    .infoalunos {
+      color: white;
+      margin-bottom: 35px;
+      font-weight: bold;
+      font-size: 1.6rem; /* maior para se ajustar à caixa maior */
+    }
+
+    .form {
+      width: 65%; /* proporcional ao novo tamanho da box */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .label {
+      color: white;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      align-items:flex-start;
+    }
+
+    .input {
+      padding: 10px 18px;
+      width: 385px;
+      height: 20px;
+      margin-bottom: 15px;
+      font-family: inherit;
+      font-size: 1rem;
+      border: 1px solid white;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      background-color: transparent;
+      color: white;
+    }
+
+    .input::placeholder {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .input:focus {
+      outline: none;
+      border-color: #fff;
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    .entrar {
+      padding: 14px 35px;
+      width: 420px; 
+      border: 1px solid white;
+      background-color: transparent;
+      color: white;
+      margin-top: 25px;
+      font-family: inherit;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+
+    .entrar:hover {
+      background-color: white;
+      color: #0282b6;
+    }
+
+    .pass {
+      color: white;
+      margin-top: 20px;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 650px) {
+      .loginbox {
+        width: 90%;
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loginbox">
+    <img class="img" src="./logo_uma_branco.png" alt="Logo UMA">
+    <h1 class="infoalunos">infoalunos.uma.pt</h1>
+    <form class="form">
+      <div for="numero" class="label">Nº de Aluno</div>
+      <input type="text" class="input" placeholder="Digite seu número de aluno" />
+
+      <div for="senha" class="label">Password</div>
+      <input type="password" class="input" placeholder="Digite sua password" />
+
+      <button class="entrar">Entrar</button>
+    </form>
+    <a class="pass">Recuperar password</a>
+  </div>
+</body>
+</html>
